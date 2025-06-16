@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: monospace; /* 타자기 느낌을 위해 monospace 폰트 사용 */
+}
+
+#keyboard {
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* textarea와의 간격 조절 */
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: default; /* 마우스로 입력 안하므로 default 커서 */
+    user-select: none;
+    font-size: 1em;
+}
+
+.key.backspace,
+.key.tab,
+.key.capslock,
+.key.enter,
+.key.shift {
+    min-width: 60px;
+}
+
+.key.space {
+    min-width: 120px;
+}
+
+.display {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 100px;
+    width: 100%; /* 키보드 너비에 맞춤 */
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1.2em;
+    line-height: 1.5;
+    white-space: pre-wrap; /* 줄 바꿈 처리 */
+}
+
+/* 각 줄 색상 */
+.row1 {
+    background-color: #f0f8ff; /* AliceBlue */
+}
+
+.row2 {
+    background-color: #e0ffff; /* LightCyan */
+}
+
+.row3 {
+    background-color: #f5f5e1; /* Beige */
+}
+
+.row4 {
+    background-color: #f0fff0; /* Honeydew */
+}
+
+.row5 {
+    background-color: #faebd7; /* Navajowhite */
+}
+
+.key.active {
+    background-color: #bbb;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 푸터 스타일 */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+}
